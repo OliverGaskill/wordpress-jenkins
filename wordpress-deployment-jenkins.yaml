@@ -38,4 +38,4 @@ spec:
             path: wp-config.php
       - name: wordpress-data
         persistentVolumeClaim:
-          claimName: wordpress-v2-pvc
+          claimName: wordpress-jenkins-pvc
