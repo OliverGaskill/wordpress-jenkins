@@ -14,8 +14,6 @@ RUN mkdir -p /var/www/html/wordpress
 
 RUN wget https://wordpress.org/latest.zip -O /tmp/wordpress.zip && unzip /tmp/wordpress.zip -d /var/www/html && rm /tmp/wordpress.zip
 
-USER 1000
-
 RUN chown -R www-data:www-data /var/www/html/wordpress && chmod -R 755 /var/www/html/wordpress
 
 USER 1000
