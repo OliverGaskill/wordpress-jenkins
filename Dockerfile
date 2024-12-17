@@ -16,8 +16,6 @@ RUN wget https://wordpress.org/latest.zip -O /tmp/wordpress.zip && unzip /tmp/wo
 
 RUN chown -R www-data:www-data /var/www/html/wordpress && chmod -R 755 /var/www/html/wordpress
 
-USER 1000
-
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     echo "<Directory /var/www/html/wordpress>" >> /etc/apache2/apache2.conf && \
     echo "AllowOverride All" >> /etc/apache2/apache2.conf && \
